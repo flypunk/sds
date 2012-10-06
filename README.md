@@ -10,25 +10,21 @@ Installation - TL;DR version
 
 Install Mongodb on your machine and start it.
 
-virtualenv sds
-cd sds
-source bin/activate
-git clone https://github.com/flypunk/fabric.git
-(cd fabric; python setup.py install)
-pip install bottle
-pip install pyDes
-pip install ordereddict
-pip install futures
+virtualenv sds  
+cd sds  
+source bin/activate  
+git clone https://github.com/flypunk/fabric.git  
+(cd fabric; python setup.py install)  
+pip install bottle pyDes ordereddict futures pymongo  
 
-git clone https://github.com/flypunk/sds.git
+git clone https://github.com/flypunk/sds.git  
 
-cd sds
-./add_user.py Username Organization Password #Copy output of this command
+cd sds  
+./add_user.py Username Organization Password #Copy output of this command  
 
-# Running it:
-./bottle_app.py
+# Running it:  
+./bottle_app.py  
 
-# Trying it:
-# In a different terminal:
+# Trying it (In a different terminal):
 curl -H 'Authorization: Basic Output_of_the_add_user_command' localhost:8081/
 
